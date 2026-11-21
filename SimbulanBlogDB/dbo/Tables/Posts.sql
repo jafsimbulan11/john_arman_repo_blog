@@ -1,0 +1,12 @@
+CREATE TABLE [dbo].[Posts]
+(
+    [Id] INT NOT NULL IDENTITY(1,1),
+    [UserId] INT NOT NULL,
+    [Title] NVARCHAR(150) NOT NULL,
+    [Body] NVARCHAR(MAX) NOT NULL,
+    [DateCreated] DATETIME2 NOT NULL DEFAULT SYSUTCDATETIME(),
+
+    CONSTRAINT [PK_Posts] PRIMARY KEY CLUSTERED ([Id] ASC),
+    CONSTRAINT [FK_Posts_Users] FOREIGN KEY ([UserId]) REFERENCES [dbo].[Users]([Id])
+);
+

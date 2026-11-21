@@ -1,0 +1,9 @@
+<Solution>
+  <Project Path="BlogApi/BlogApi.csproj" Id="d01f0743-fa77-40bc-9bdb-09cc7991f2ac" />
+  <Project Path="BlogDataLibrary/BlogDataLibrary.csproj" />
+  <Project Path="BlogTestUI/BlogTestUI.csproj" />
+  <Project Path="SimbulanBlogDB/SimbulanBlogDB.sqlproj" Id="4a83be75-d144-486a-8b83-b9561f71dae2">
+    <Build />
+    <Deploy />
+  </Project>
+</Solution>
