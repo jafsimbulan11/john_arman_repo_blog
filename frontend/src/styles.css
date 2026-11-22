@@ -1,0 +1,139 @@
+/* Classic early-2000s PHP / Web 1.0 stylesheet */
+
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  background-color: #ffffff;
+  color: #222222;
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  line-height: 1.55;
+}
+
+a {
+  color: #003399;
+  text-decoration: underline;
+}
+
+a:visited {
+  color: #4b2a7b;
+}
+
+a:hover {
+  color: #cc0000;
+}
+
+h1, h2, h3, h4 {
+  margin: 0 0 10px 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #1f3a5f;
+}
+
+p {
+  margin: 0 0 12px 0;
+}
+
+hr {
+  border: 0;
+  border-top: 1px solid #cccccc;
+  margin: 14px 0;
+}
+
+/* Classic Windows XP / PHP form box */
+.php-box {
+  background-color: #f7f7f7;
+  border: 1px solid #999999;
+  margin: 22px auto;
+  max-width: 500px;
+}
+
+.php-box-header {
+  background-color: #336699;
+  color: #ffffff;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 9px 14px;
+  border-bottom: 1px solid #1f3a5f;
+}
+
+.php-box-body {
+  padding: 20px;
+}
+
+.form-row-legacy {
+  margin-bottom: 14px;
+}
+
+.form-row-legacy label {
+  display: block;
+  font-size: 14px;
+  font-weight: bold;
+  color: #333333;
+  margin-bottom: 5px;
+}
+
+.form-row-legacy input {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 7px 9px;
+  font-family: Verdana, Arial, sans-serif;
+  font-size: 14px;
+  color: #000000;
+  background-color: #ffffff;
+  border: 1px solid #7f9db9;
+}
+
+.form-row-legacy input:focus {
+  outline: none;
+  border-color: #336699;
+  background-color: #fffff0;
+}
+
+.php-btn {
+  display: inline-block;
+  padding: 7px 18px;
+  font-family: Verdana, Arial, sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  color: #000000;
+  background-color: #e4e4e4;
+  border: 2px outset #cccccc;
+  cursor: pointer;
+}
+
+.php-btn:hover {
+  background-color: #d4d4d4;
+}
+
+.php-btn:active {
+  border-style: inset;
+}
+
+.php-btn-blue {
+  background-color: #336699;
+  color: #ffffff;
+  border: 2px outset #5c8ab8;
+}
+
+.php-btn-blue:hover {
+  background-color: #28527a;
+}
+
+.php-note {
+  margin-top: 16px;
+  padding-top: 10px;
+  border-top: 1px dotted #bbbbbb;
+  font-size: 13px;
+  color: #555555;
+}
+
+.php-error {
+  background-color: #ffe6e6;
+  border: 1px solid #cc0000;
+  color: #990000;
+  padding: 8px 10px;
+  margin-bottom: 12px;
+  font-size: 13px;
+}

@@ -1,0 +1,29 @@
+<div class="page-wrapper">
+  <div class="banner">
+    <h1><a routerLink="/">{{ title() }}</a></h1>
+    <div class="tagline">Simple Web Blog System</div>
+  </div>
+
+  <div class="navbar">
+    <a routerLink="/" routerLinkActive="current" [routerLinkActiveOptions]="{ exact: true }">Home</a>
+    <span class="sep">|</span>
+    <a routerLink="/add-post" routerLinkActive="current">Add Post</a>
+    <span class="sep">|</span>
+    <ng-container *ngIf="!isLoggedIn; else loggedInLinks">
+      <a routerLink="/login" routerLinkActive="current">Login</a>
+      <span class="sep">|</span>
+      <a routerLink="/register" routerLinkActive="current">Register</a>
+    </ng-container>
+    <ng-template #loggedInLinks>
+      <a href="javascript:void(0)" (click)="logout()">Logout</a>
+    </ng-template>
+  </div>
+
+  <div class="content-area">
+    <router-outlet></router-outlet>
+  </div>
+
+  <div class="footer">
+    &copy; 2026 {{ title() }} - All Rights Reserved.
+  </div>
+</div>

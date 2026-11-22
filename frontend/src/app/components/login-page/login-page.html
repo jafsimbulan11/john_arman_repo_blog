@@ -1,0 +1,42 @@
+<div class="php-box">
+  <div class="php-box-header">User Login</div>
+  <div class="php-box-body">
+    <p class="login-intro">Welcome Back. Please login below.</p>
+
+    <div class="php-error" *ngIf="errorMessage">{{ errorMessage }}</div>
+
+    <form name="form" (ngSubmit)="onSubmit()" #f="ngForm" novalidate>
+      <div class="form-row-legacy">
+        <label for="username">Username / Email:</label>
+        <input
+          id="username"
+          required
+          type="text"
+          name="username"
+          [(ngModel)]="form.username"
+          #username="ngModel"
+        />
+      </div>
+
+      <div class="form-row-legacy">
+        <label for="password">Password:</label>
+        <input
+          id="password"
+          type="password"
+          name="password"
+          [(ngModel)]="form.password"
+          required
+          #password="ngModel"
+        />
+      </div>
+
+      <div class="form-actions">
+        <button type="submit" class="php-btn php-btn-blue">Login</button>
+      </div>
+    </form>
+
+    <div class="php-note">
+      No account yet? <a routerLink="/register">Register here</a>.
+    </div>
+  </div>
+</div>

@@ -1,0 +1,25 @@
+<div class="section-bar">
+  <span>All Posts</span>
+  <a routerLink="/add-post" class="php-btn php-btn-blue add-post-btn">+ Add Post</a>
+</div>
+
+<div *ngIf="posts.length > 0; else noPosts">
+  <div class="post-item" *ngFor="let post of posts">
+    <h3 class="post-heading">
+      <a [routerLink]="['/post', post.id]">{{ post.title }}</a>
+    </h3>
+    <div class="post-info">
+      Posted by <strong>{{ post.firstName }} {{ post.lastName }}</strong> on {{ post.dateCreated | date: 'mediumDate' }}
+    </div>
+    <p class="post-snippet" *ngIf="post.body">{{ post.body }}</p>
+    <div class="post-links">
+      <a [routerLink]="['/post', post.id]">[Read More &raquo;]</a>
+    </div>
+  </div>
+</div>
+
+<ng-template #noPosts>
+  <div class="empty-box">
+    No posts found in database.
+  </div>
+</ng-template>

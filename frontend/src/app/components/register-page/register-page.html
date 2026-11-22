@@ -1,0 +1,64 @@
+<div class="php-box">
+  <div class="php-box-header">Register New Account</div>
+  <div class="php-box-body">
+    <div class="php-error" *ngIf="errorMessage">{{ errorMessage }}</div>
+
+    <form name="form" (ngSubmit)="onSubmit()" #f="ngForm">
+      <div class="form-row-legacy">
+        <label for="username">Username:</label>
+        <input
+          id="username"
+          type="text"
+          name="username"
+          [(ngModel)]="form.username"
+          required
+          #username="ngModel"
+        />
+      </div>
+
+      <div class="form-row-legacy">
+        <label for="password">Password:</label>
+        <input
+          id="password"
+          type="password"
+          name="password"
+          [(ngModel)]="form.password"
+          required
+          #password="ngModel"
+        />
+      </div>
+
+      <div class="form-row-legacy">
+        <label for="firstName">First Name:</label>
+        <input
+          id="firstName"
+          type="text"
+          name="firstName"
+          [(ngModel)]="form.firstName"
+          required
+          #firstName="ngModel"
+        />
+      </div>
+
+      <div class="form-row-legacy">
+        <label for="lastName">Last Name:</label>
+        <input
+          id="lastName"
+          type="text"
+          name="lastName"
+          [(ngModel)]="form.lastName"
+          required
+          #lastName="ngModel"
+        />
+      </div>
+
+      <div class="form-actions">
+        <button type="submit" class="php-btn php-btn-blue">Submit</button>
+      </div>
+    </form>
+
+    <div class="php-note">
+      Already registered? <a routerLink="/login">Login here</a>.
+    </div>
+  </div>
+</div>

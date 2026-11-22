@@ -1,0 +1,37 @@
+<div class="php-box add-post-box">
+  <div class="php-box-header">Create New Post</div>
+  <div class="php-box-body">
+    <div class="php-error" *ngIf="errorMessage">{{ errorMessage }}</div>
+
+    <form name="form" (ngSubmit)="onSubmit()" #f="ngForm">
+      <div class="form-row-legacy">
+        <label for="title">Title:</label>
+        <input
+          id="title"
+          type="text"
+          name="title"
+          [(ngModel)]="form.title"
+          required
+          #title="ngModel"
+        />
+      </div>
+
+      <div class="form-row-legacy">
+        <label for="body">Body:</label>
+        <textarea
+          id="body"
+          name="body"
+          rows="8"
+          [(ngModel)]="form.body"
+          required
+          #body="ngModel"
+        ></textarea>
+      </div>
+
+      <div class="form-actions">
+        <button type="submit" class="php-btn php-btn-blue">Publish Post</button>
+        <a routerLink="/" class="cancel-link">Cancel</a>
+      </div>
+    </form>
+  </div>
+</div>
